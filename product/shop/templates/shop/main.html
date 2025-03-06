@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product-show</title>
+  </head>
+  <body>
+    <h1 style="width: max-content; border: 1px black solid">{{ name }}</h1>
+    {% if quantity != 0 %}
+    <h3>{{ quantity }}</h3>
+    {% endif %}
+    <h4>{{ price }}</h4>
+  </body>
+</html>

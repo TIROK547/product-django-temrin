@@ -1,5 +1,6 @@
 from django.http.response import HttpResponse, JsonResponse, FileResponse
 import os
+from django.shortcuts import render
 product = {
     "name": "example",
     "quantity": 10,
@@ -16,4 +17,5 @@ def buy_response(request, quantity:int = 0):
     else:
         product["quantity"] -= quantity
         return HttpResponse(f"final price: {quantity * product['price']}$ for {quantity} products, remaining: {product['quantity']}")
-    
+def show(request):
+    return render(request, "shop/main.html", context = product)
